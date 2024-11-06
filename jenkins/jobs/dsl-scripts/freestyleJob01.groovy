@@ -13,7 +13,7 @@ job('simple-ci-cd') {
     // Define build environment variables using credentials
     wrappers {
         credentialsBinding {
-            usernamePassword('DOCKER_USERNAME', 'DOCKER_PASSWORD', 'docker-hub-id') // Replace 'github-credentials-id' with the actual credentials ID
+            usernamePassword('DOCKER_USERNAME', 'DOCKER_PASSWORD', 'docker-hub') // Replace 'github-credentials-id' with the actual credentials ID
         }
     }
 
