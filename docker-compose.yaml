@@ -10,6 +10,7 @@ services:
       - "50000:50000"    # Maps port 50000 for Jenkins agents
     environment:
       - DOCKER_HOST=tcp://host.docker.internal:2375  # Set DOCKER_HOST to connect to Docker Desktop on Windows
+      - CASC_JENKINS_CONFIG=/var/jenkins_home/jenkins.yml
     volumes:
       - jenkins_home:/var/jenkins_home  # Persists Jenkins data
 
