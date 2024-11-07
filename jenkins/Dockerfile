@@ -18,11 +18,14 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Copy the jenkins.yaml file to casc config
+COPY jenkins.yaml /var/jenkins_home/jenkins.yml
+
 # Copy the plugins.txt file to the container
-# COPY plugins.txt /usr/share/jenkins/plugins.txt
+COPY plugins.txt /usr/share/jenkins/plugins.txt
 
 # Install the plugins listed in the plugins.txt file
-# RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/plugins.txt
+RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/plugins.txt
 
 # Expose the Jenkins port
 EXPOSE 8080
