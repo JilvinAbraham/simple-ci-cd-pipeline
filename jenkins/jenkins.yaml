@@ -216,7 +216,7 @@ jobs:
 
           steps {
             dsl {
-              external('path/to/dsl/scripts/**/*.groovy') 
+              external('jenkins/jobs/dsl-scripts/*.groovy') 
               removeAction('DELETE')
               ignoreExisting(true)
             }
