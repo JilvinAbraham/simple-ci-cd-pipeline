@@ -4,6 +4,7 @@ credentials:
     - credentials:
       - usernamePassword:
           id: "docker-hub"
+          # Update directly from jenkins UI instead of in config file
           password: "<your-docker-hub-password>"
           scope: GLOBAL
           username: "<your-docker-hub-username>"
